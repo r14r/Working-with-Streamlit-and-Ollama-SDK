@@ -54,21 +54,16 @@ class StreamlitOllamaHelper:
         if not models:
             models = default_models or ["gemma3", "llama3.2", "llama3.1", "qwen2.5"]
 
-        # Determine default index based on session state
+        # Determine default index - check if previous selection exists and is still valid
         default_index = 0
-        session_key = f"{key}_value"
-        
-        if session_key in st.session_state and st.session_state[session_key] in models:
-            default_index = models.index(st.session_state[session_key])
+        if key in st.session_state and st.session_state[key] in models:
+            default_index = models.index(st.session_state[key])
 
         if location == "sidebar":
             with st.sidebar:
-                selected = st.selectbox(label, models, key=key, index=default_index)
+                selected = st.selectbox(label, models, index=default_index, key=key)
         else:
-            selected = st.selectbox(label, models, key=key, index=default_index)
-
-        # Store the selection in session state
-        st.session_state[session_key] = selected
+            selected = st.selectbox(label, models, index=default_index, key=key)
         
         return selected
 
