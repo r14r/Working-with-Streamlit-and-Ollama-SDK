@@ -1,0 +1,11 @@
+streamlit
+watchdog
+
+ollama
+requests
+httpx
+pydantic
+rich
+tqdm
+
+
