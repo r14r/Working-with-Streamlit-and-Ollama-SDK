@@ -1,4 +1,10 @@
-# Running Examples
+# Working with Streamlit and Ollama
+
+This repository contains interactive Streamlit applications based on the official Ollama Python SDK examples. Each example has been adapted to provide a user-friendly web interface, making it easy to explore and experiment with Ollama's capabilities directly in your browser.
+
+![App](doc/home.png)
+
+## Run Examples
 
 Run the examples in this directory with:
 
@@ -11,6 +17,8 @@ uv run examples/<example>.py
 ```
 
 See [ollama/docs/api.md](https://github.com/ollama/ollama/blob/main/docs/api.md) for full API documentation
+
+## Examples
 
 ### Chat - Chat with a model
 
@@ -32,7 +40,7 @@ See [ollama/docs/api.md](https://github.com/ollama/ollama/blob/main/docs/api.md)
 - [async-tools.py](async-tools.py)
 - [multi-tool.py](multi-tool.py) - Using multiple tools, with thinking enabled
 
-#### gpt-oss
+### gpt-oss
 
 - [gpt-oss-tools.py](gpt-oss-tools.py)
 - [gpt-oss-tools-stream.py](gpt-oss-tools-stream.py)
@@ -48,7 +56,7 @@ export OLLAMA_API_KEY="your_api_key_here"
 - [web-search.py](web-search.py)
 - [web-search-gpt-oss.py](web-search-gpt-oss.py) - Using browser research tools with gpt-oss
 
-#### MCP server
+### MCP server
 
 The MCP server can be used with an MCP client like Cursor, Cline, Codex, Open WebUI, Goose, and more.
 
