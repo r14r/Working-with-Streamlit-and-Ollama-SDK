@@ -2,7 +2,7 @@
 
 This repository contains interactive Streamlit applications based on the official Ollama Python SDK examples. Each example has been adapted to provide a user-friendly web interface, making it easy to explore and experiment with Ollama's capabilities directly in your browser.
 
-![App](src/doc/home.png)
+![App](doc/home.png)
 
 ## Run Examples
 
